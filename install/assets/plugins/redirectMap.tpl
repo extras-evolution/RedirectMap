@@ -1,5 +1,18 @@
-&chunk=Чанк с картой редиректов;text;КартаРедиректов
-opnagenotfound
+//<?
+/** 
+ * RedirectMap
+ * 
+ * 301 redirect from old link to new 
+ *
+ * @category    plugin 
+ * @version     1.0
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL) 
+ * @internal    @properties &chunk=Chunk with redirectMap;text;RedirectMap
+ * @internal    @events OnPageNotFound 
+ * @internal    @modx_category SEO 
+ * @internal    @legacy_names Sape
+ * @internal    @installset base
+ */
 
 global $modx;
 
