@@ -18,7 +18,8 @@ global $modx;
 
 $mapChunk = $modx->getChunk($chunk);
 
-$mapLines = explode("\r\n",$mapChunk);
+//$mapLines = explode("\r\n",$mapChunk);
+$mapLines = explode(PHP_EOL,$mapChunk);
 
 $mapArr = array();
 
