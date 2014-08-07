@@ -31,7 +31,7 @@ foreach($mapLines as $line) {
 $q = $_REQUEST['q'];
 
 if(isset($mapArr[$q])) {
-        $url = $modx->makeUrl($mapArr[$q]);
+        $url = $modx->makeUrl(trim($mapArr[$q]));
         $modx->sendRedirect($url,0,'REDIRECT_HEADER','HTTP/1.1 301 Moved Permanently');
         exit();
 }
