@@ -47,7 +47,12 @@ $q = $_REQUEST['q'];
 if(isset($mapArr[$q])) {
         $url = $modx->makeUrl(trim($mapArr[$q]));
         if(!empty($urlencode_function)) {
-                $url = implode('/', array_map(function ($v) { return $urlencode_function($v); }, explode('/', $url)));                    
+                $urlArr = explode('/', $url);
+		$urlResArr = array();
+		foreach($urlArr AS $k => $v) {
+			$urlResArr[] = call_user_func($urlencode_function, $v);
+		}
+		$url = implode('/', $urlResArr);                   
         }
         $modx->sendRedirect($url,0,'REDIRECT_HEADER','HTTP/1.1 301 Moved Permanently');
         exit();
