@@ -22,7 +22,7 @@ if(isset($urlencode)) {
                 case 'rawurlencode' :
                 $urlencode_function = 'rawurlencode';
                 break;
-                case 'urlencode'
+                case 'urlencode' :
                 $urlencode_function = 'urlencode'; 
                 break;
                 default:
