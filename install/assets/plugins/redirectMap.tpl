@@ -47,7 +47,7 @@ $q = $_REQUEST['q'];
 if(isset($mapArr[$q])) {
         $url = $modx->makeUrl(trim($mapArr[$q]));
         if(!empty($urlencode_function)) {
-                implode('/', array_map(function ($v) { return $urlencode_function($v); }, explode('/', $url)));                    
+                $url = implode('/', array_map(function ($v) { return $urlencode_function($v); }, explode('/', $url)));                    
         }
         $modx->sendRedirect($url,0,'REDIRECT_HEADER','HTTP/1.1 301 Moved Permanently');
         exit();
